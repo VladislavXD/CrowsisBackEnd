@@ -20,6 +20,7 @@ app.use(Express.json());
 
 
 
+
 //Autoresation
 app.post('/auth/login', LoginValidation, UserController.login);
 //Registration
