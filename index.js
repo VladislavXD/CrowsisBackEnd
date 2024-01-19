@@ -9,7 +9,7 @@ import * as UserController from './controllers/UserController.js'
 import cors from 'cors';
 
 mongoose.connect(
-    'mongodb+srv://Crowsis:crowsis12345@cluster0.6vpgtwr.mongodb.net/blog?retryWrites=true&w=majority',
+    process.env.MONGODB_URI,
     )
     .then(() => { console.log(('DB OK')) })
     .catch((err) => { console.log(`DB ERROR ${err}`) });
