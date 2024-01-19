@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node inedx.js",
+    "start": "node index.js",
     "start:dev": "nodemon index.js"
-  },
+  },  
   "author": "",
   "license": "ISC",
   "dependencies": {
