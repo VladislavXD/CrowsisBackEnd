@@ -9,7 +9,7 @@ import * as UserController from './controllers/UserController.js'
 import cors from 'cors';
 
 mongoose.connect(
-    'mongodb+srv://Crowsistest:crowsis123@cluster0.6vpgtwr.mongodb.net/blog?retryWrites=true&w=majority',
+    process.env.MONGODB_URI,
     )
     .then(() => { console.log(('DB OK')) })
     .catch((err) => { console.log(`DB ERROR ${err}`) });
@@ -19,7 +19,6 @@ app.use(Express.json());
 
 
 
-  
 
 //Autoresation
 app.post('/auth/login', LoginValidation, UserController.login);
