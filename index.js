@@ -8,8 +8,9 @@ import * as UserController from './controllers/UserController.js'
 
 import cors from 'cors';
 
-mongoose.connect('mongodb+srv://Crowsis:crowsis12345@cluster0.6vpgtwr.mongodb.net/blogg?retryWrites=true&w=majority'
-    ,)
+mongoose.connect(
+    process.env.MONGODB_URI,
+    )
     .then(() => { console.log(('DB OK')) })
     .catch((err) => { console.log(`DB ERROR ${err}`) });
 const app = Express();
@@ -29,7 +30,7 @@ app.get('/auth/me', chekAuth, UserController.getMe)
 
 
 
-app.listen(5000, (err) => {
+app.listen(process.env.PORT || 5000, (err) => {
     if (err) {
         return console.log(`Error ${err}`);
     }
