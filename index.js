@@ -18,11 +18,7 @@ app.use(cors());
 app.use(Express.json());
 
 
-app.use((req, res, next) => {
-    const clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    res.send(console.log(`Client IP address: ${clientIp}`))
-    next();
-  });
+
   
 
 //Autoresation
