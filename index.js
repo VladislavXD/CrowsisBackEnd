@@ -1,10 +1,10 @@
 import Express from "express";
 import mongoose from "mongoose";
-import { registerValidation } from '../validations/auth.js';
-import chekAuth from '../utils/chekAuth.js'
-import { LoginValidation } from "../validations/login.js";
+import { registerValidation } from './validations/auth.js';
+import chekAuth from './utils/chekAuth.js'
+import { LoginValidation } from "./validations/login.js";
 
-import * as UserController from '../controllers/UserController.js'
+import * as UserController from './controllers/UserController.js'
 
 import cors from 'cors';
 
