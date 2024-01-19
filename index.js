@@ -20,7 +20,7 @@ app.use(Express.json());
 
 app.use((req, res, next) => {
     const clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    console.log(`Client IP address: ${clientIp}`);
+    res.send(console.log(`Client IP address: ${clientIp}`))
     next();
   });
   
